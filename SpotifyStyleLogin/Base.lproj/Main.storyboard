@@ -233,7 +233,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFO-Tz-bBY">
-                                <rect key="frame" x="153" y="473.66666666666669" width="87" height="36"/>
+                                <rect key="frame" x="153" y="525.66666666666663" width="87" height="36"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그아웃">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
@@ -243,17 +243,30 @@
                                     <action selector="logoutButtonTapped:" destination="f2t-Gx-2PN" eventType="touchUpInside" id="xAN-gV-LWh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rj-Kv-o5T">
+                                <rect key="frame" x="143.66666666666666" y="473.66666666666669" width="106" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호 변경">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="f2t-Gx-2PN" eventType="touchUpInside" id="afJ-q8-DYe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qYr-Uc-XUh"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cFO-Tz-bBY" firstAttribute="top" secondItem="FXV-2t-fD5" secondAttribute="bottom" constant="20" id="57P-qP-1PE"/>
+                            <constraint firstItem="4rj-Kv-o5T" firstAttribute="centerX" secondItem="qYr-Uc-XUh" secondAttribute="centerX" id="10o-6C-vny"/>
                             <constraint firstItem="FXV-2t-fD5" firstAttribute="centerX" secondItem="qYr-Uc-XUh" secondAttribute="centerX" id="EWd-EO-kLa"/>
                             <constraint firstItem="FXV-2t-fD5" firstAttribute="centerY" secondItem="qYr-Uc-XUh" secondAttribute="centerY" id="Llq-br-tpt"/>
+                            <constraint firstItem="cFO-Tz-bBY" firstAttribute="top" secondItem="4rj-Kv-o5T" secondAttribute="bottom" constant="20" id="dTy-jj-f2K"/>
+                            <constraint firstItem="4rj-Kv-o5T" firstAttribute="top" secondItem="FXV-2t-fD5" secondAttribute="bottom" constant="20" id="gEQ-Yk-FUf"/>
                             <constraint firstItem="cFO-Tz-bBY" firstAttribute="centerX" secondItem="qYr-Uc-XUh" secondAttribute="centerX" id="maV-oo-CqJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="4rj-Kv-o5T" id="Vig-Nj-f6z"/>
                         <outlet property="welcomeLabel" destination="FXV-2t-fD5" id="ftz-Th-qkv"/>
                     </connections>
                 </viewController>
